@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdsirius"
+version = "0.1.0"
+description = "Compound Discoverer integration with Sirius 6.0 for MS/MS compound annotation"
+readme = "README.md"
+requires-python = "==3.11.*"
+license = {text = "MIT"}
+authors = [
+    {name = "Lee Ferguson", email = "lee.ferguson@duke.edu"}
+]
+maintainers = [
+    {name = "Lee Ferguson", email = "lee.ferguson@duke.edu"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "pandas",
+    # pyeds is installed separately from GitHub
+    "rdkit-pypi",
+    "molmass",
+    # pysirius is installed separately from GitHub
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "openpyxl",
+    "requests"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/fergusonlabduke/cdSirius"
+"Bug Tracker" = "https://github.com/fergusonlabduke/cdSirius/issues"
+
+[project.scripts]
+cdsirius = "cdsirius.cdSirius:main"
+cdsirius-setup = "cdsirius.cli:main"
+
+[tool.setuptools]
+packages = ["cdsirius"]
+
+[tool.setuptools.package-data]
+cdsirius = ["*.json", "*.png"]
+
+[tool.setuptools.dynamic]
+version = {attr = "cdsirius.__version__"}
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
