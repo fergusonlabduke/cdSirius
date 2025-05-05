@@ -1,0 +1,51 @@
+{
+  "CurrentWorkflowID": 140,
+  "ExpectedResponsePath": "C:\\Users\\pf31\\Documents\\scratch\\node_response.json",
+  "ResultFilePath": "C:\\Users\\pf31\\Documents\\AstralDemo\\Burlington_Lumos_POS.cdResult",
+  "NodeParameters": {
+    "Sirius Program Path": "C:\\Program Files\\sirius\\sirius.exe",
+    "Save Sirius Result": "False",
+    "Save Sirius Predicted Fingerprints": "True",
+    "Sirius Username": "lee.ferguson@duke.edu",
+    "Sirius Password": "121#Hudson",
+    "Checked Feature Status Handling": "All",
+    "Peak Quality Threshold": "5.5",
+    "Maximum MW": "1500",
+    "Maximum Formula Candidates": "10",
+    "MS1 Mass Accuracy [ppm]": "2",
+    "MS2 Mass Accuracy [ppm]": "5",
+    "Filter by Isotope Pattern": "True",
+    "Enforce Lipid Detection Filtering": "True",
+    "Perform Bottom-Up Formula Search": "True",
+    "De novo Formula Generation Threshold": "400",
+    "Formula Elemental Constraints": "HCNOP[4]F[40]",
+    "Predict Structures": "True",
+    "PubChem as Fallback": "True",
+    "Predict Compound Classes": "True",
+    "Predict de Novo Structures": "False",
+    "De Novo Structure Candidates Limit": "128"
+  },
+  "Version": 1,
+  "Tables": [
+    {
+      "TableName": "Compounds",
+      "DataFile": "C:\\Users\\pf31\\Documents\\scratch\\ConsolidatedUnknownCompoundItem.txt",
+      "DataFormat": "CSV",
+      "Options": {},
+      "ColumnDescriptions": [
+        {
+          "ColumnName": "Compounds ID",
+          "ID": "ID",
+          "DataType": "Int",
+          "Options": {}
+        },
+        {
+          "ColumnName": "Background",
+          "ID": "",
+          "DataType": "Boolean",
+          "Options": {}
+        }
+      ]
+    }
+  ]
+}
