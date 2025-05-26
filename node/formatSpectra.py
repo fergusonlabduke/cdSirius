@@ -22,7 +22,7 @@ def makeFeatures(cdResult, CheckedOnly, MinPeakRating, MaxMass, Limit):
        
         # get MS1 and MS2 from best MS2 hit and not background
         queries = {"Compounds": f"BackgroundStatus = 0 AND ExcludedBy = -1 AND MSDepth = 2 AND PeakRatingMax > {MinPeakRating}" 
-                   + (' AND Checked = TRUE' if CheckedOnly else ''),
+                   + (' AND Checked = 1' if CheckedOnly else ''),
                    "BestHitIonInstanceItem": f"Mass < {MaxMass}",
                    "MassSpectrumInfoItem": "MassAnalyzer IN (2, 7)",}
        
