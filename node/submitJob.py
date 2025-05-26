@@ -261,7 +261,9 @@ def retrieveSiriusResults(api, ps_info, jobSub, saveFingerprints):
             if saveFingerprints:
                 topFingerprint = formula_df.loc[formula_df['formulaId'] == topFormulaID, 'predictedFingerprint'].item()
                 topAnnotation['topFingerprint'] = [] if topFingerprint is None else topFingerprint
-                formula_df.drop(['predictedFingerprint'], axis = 1, inplace = True)
+            
+            # Drop predictedFingerprint field from formula data frame
+            formula_df.drop(['predictedFingerprint'], axis = 1, inplace = True)
             
             # Expand molecular formulas
             formula_df['Formula'] = formula_df['molecularFormula'].apply(expandFormula)
