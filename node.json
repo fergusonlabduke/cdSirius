@@ -65,7 +65,7 @@
 "Default": "All",
 "SelectionValues": ["Checked", "Unchecked", "All"],
 "Category": "2. Compound Selection Settings",
-"Description": "How should checked features be handled by Sirius processing?"
+"Description": "How should checked features be handled by Sirius processing?  Note: use 'All' when including this node in a full processing workflow."
 },
 {
 "DataType": "Float",
